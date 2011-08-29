@@ -140,6 +140,6 @@ submission behavior.")
 ;; Dependencies
 (defmethod dependencies append ((obj dataform))
   (dependencies
-   (ecase (dataform-ui-state obj)
+   (case (dataform-ui-state obj)
      (:form (dataform-form-view obj))
      (:data (dataform-data-view obj)))))

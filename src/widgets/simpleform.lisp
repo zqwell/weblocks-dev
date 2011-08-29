@@ -177,3 +177,7 @@ Example:
                                (:span :class "validation-error-heading" "Error:&nbsp;")
                                (str (format nil "~A" (cdr validation-error))))))))))))
 
+(defmethod dependencies append ((obj simpleform)) 
+  (dependencies 
+   (case (dataform-ui-state obj) 
+     (:success (simpleform-success-widget obj))))) 
