@@ -76,7 +76,7 @@ variable. All html should be rendered to this stream.")
 
 (defmacro with-html-to-string (&body body)
   "A wrapper around cl-who with-html-output-to-string macro."
-  `(with-html-output-to-string (*weblocks-output-stream* nil)
+  `(with-html-output-to-string (*weblocks-output-stream* nil :indent t)
      ,@body))
 
 (defun escape-script-tags (source &key (delimiter ps:*js-string-delimiter*))
