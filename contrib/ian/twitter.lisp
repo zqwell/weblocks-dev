@@ -30,15 +30,15 @@
   (with-slots (history maxcount) widget
     (sort 
      (if history
-	 (append (twitter-op :user-timeline 
+	 (append (twitter-op :statuses/user-timeline 
 			     :since-id (tweet-id (first history)))
 		 (when (include-friends-p widget)
-		   (twitter-op :friends-timeline
+		   (twitter-op :statuses/friends-timeline
 			       :since-id (tweet-id (first history)))))
-	 (append (twitter-op :user-timeline
+	 (append (twitter-op :statuses/user-timeline
 			     :count maxcount)
 		 (when (include-friends-p widget)
-		   (twitter-op :friends-timeline
+		   (twitter-op :statuses/friends-timeline
 			       :count maxcount))))
      #'> :key #'tweet-id)))
 
