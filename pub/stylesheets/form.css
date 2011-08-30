@@ -60,7 +60,9 @@ form.view fieldset ul li label textarea
 {
   margin-top: 2px;
   margin-bottom: 2px;
-  width: 12em;
+/*  width: 12em; */
+/* fieldの幅を設定する */
+ width: 18em;
 }
 
 /* Target firefox */
@@ -136,7 +138,8 @@ p.validation-error span.validation-error-heading
 form.view fieldset ul li label.radio
 {
   display: block;
-  margin-left: 12em;
+/* Radioボタンの表示がくずれるためコメントアウト */
+/*  margin-left: 12em; */
 }
 
 form.view >/**/fieldset ul li label.radio
