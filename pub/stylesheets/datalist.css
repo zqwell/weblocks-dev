@@ -1,4 +1,14 @@
 
+/* 2011/08/27 zqwell datalistのAddボタンの位置不正対応 start */
+/* Body */
+.datalist
+{
+  margin-bottom: 1em;
+  position: relative;
+  _height: 1%; /* IE 6 fix */
+}
+/* 2011/08/27 zqwell datalistのAddボタンの位置不正対応 end */
+
 .datalist .data-mining-bar form,
 .datalist .data-mining-bar form fieldset
 {
